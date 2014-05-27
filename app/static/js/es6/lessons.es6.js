@@ -12,7 +12,7 @@
     $('#addlesson').click(showLessonForm);
     $('#savelesson').click(saveLesson);
     loadEditor();
-     $( '#accordion' ).accordion();
+     //$( '#accordion' ).accordion();
   }
 
   function showLessonForm(){
@@ -20,7 +20,7 @@
   }
 
   function saveLesson(){
-    var title = $('#title').val();
+    var title = $('input#title').val();
     var description = $('#description').val();
     var courseId = $('#course').attr('data-id');
     var content = fullEditor.getHTML();
@@ -28,7 +28,7 @@
     ajax(`/course/${courseId}/addLesson`, 'post', {title:title, description:description, content:content}, html=>{
       console.log(html);
       $('#lesson-list').empty().append(html);
-      $('#title').val('');
+      $('input#title').val('');
       $('#description').val('');
       fullEditor.deleteText(0,9999);
     });

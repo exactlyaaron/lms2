@@ -28,6 +28,7 @@ button {
   color:@main-color;
   padding: 10px 20px;
   margin-right:10px;
+  text-decoration:none;
 }
 
 button:hover {
@@ -390,12 +391,16 @@ header {
     font-weight:33;
     font-size: 24px;
     line-height: 10px;
+    background-color:#fbfbfb;
+    color:@main-color;
   }
 
   p.lessondesc {
     font-weight:normal;
     font-size: 14px;
   }
+
+
 }
 
 #courses {
@@ -538,6 +543,40 @@ p.question {
   font-weight: 700;
 }
 
+.completed-title {
+  color:@main-color;
+  padding:2px;
+  border-bottom: 3px solid @main-color;
+}
+
+.lessontitle {
+  font-weight:700;
+  font-size: 20px;
+  background-color:@main-color;
+  color:#fff;
+  padding:1px 25px;
+}
+
+#taketest-wrapper {
+  text-align:center;
+  border-top: 1px solid #ccc;
+  padding-top: 25px;
+}
+
+a#taketest {
+  display:block;
+  width:300px;
+  background-color: @main-color;
+  padding: 15px 0;
+  color:#fff;
+  text-decoration:none;
+  margin:0 auto;
+}
+
+a#taketest:hover {
+  background-color:#333;
+  color: @main-color;
+}
 
 
 

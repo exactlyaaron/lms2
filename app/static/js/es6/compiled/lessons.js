@@ -6,13 +6,12 @@
     $('#addlesson').click(showLessonForm);
     $('#savelesson').click(saveLesson);
     loadEditor();
-    $('#accordion').accordion();
   }
   function showLessonForm() {
     $('#lessons').slideToggle();
   }
   function saveLesson() {
-    var title = $('#title').val();
+    var title = $('input#title').val();
     var description = $('#description').val();
     var courseId = $('#course').attr('data-id');
     var content = fullEditor.getHTML();
@@ -23,7 +22,7 @@
     }, (function(html) {
       console.log(html);
       $('#lesson-list').empty().append(html);
-      $('#title').val('');
+      $('input#title').val('');
       $('#description').val('');
       fullEditor.deleteText(0, 9999);
     }));
